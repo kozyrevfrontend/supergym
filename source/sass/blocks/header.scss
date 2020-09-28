@@ -1,0 +1,148 @@
+.header {
+  padding-bottom: 94px;
+
+  background-image: url("../img/header-bg-desktop@1x.jpg"), conic-gradient(from 130.31deg at 16.03% 44.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+  background-repeat: no-repeat;
+  background-position: left 65% top 51px, 0 0;
+  background-size: 500px 556px, auto auto;
+
+  @media (max-width: 1160px) {
+    background-position: left 85% top 51px, 0 0;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/header-bg-desktop@2x.jpg"), conic-gradient(from 130.31deg at 16.03% 44.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+  }
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 111px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header__phone {
+  font-family: "BebasNeue", "Arial", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.header__main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.header__main-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 396px;
+}
+
+.header__title {
+  margin: 0;
+  order: 2;
+
+  font-family: "BebasNeue", "Arial", sans-serif;
+  font-size: 109px;
+  font-weight: 700;
+  line-height: 109px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: right;
+  color: #ffffff;
+}
+
+.header__services-list {
+  @include list-reset;
+
+  margin-right: auto;
+  padding-left: 19px;
+  margin-top: -96px;
+  order: 3;
+
+  text-align: right;
+}
+
+.header__services-item {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+.header__city {
+  margin: 0;
+  margin-bottom: 8px;
+  order: 1;
+
+  font-family: "BebasNeue", "Arial", sans-serif;
+  font-size: 49px;
+  font-weight: 400;
+  line-height: 59px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: right;
+  color: #ffffff;
+}
+
+.header__buy-link {
+  width: 233px;
+  height: 60px;
+  margin-top: 85px;
+  margin-left: auto;
+  order: 3;
+}
+
+.header__social-list {
+  @include list-reset;
+
+  margin-top: auto;
+
+  text-align: right;
+}
+
+.header__social-item {
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.header__social-link {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

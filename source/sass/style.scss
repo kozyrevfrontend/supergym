@@ -1,7 +1,7 @@
+@import "variables.scss";
+@import "mixins.scss";
 @import "fonts.scss";
-
-h1 {
-  font-family: "RobotoCondensed", sans-serif;
-  font-weight: 700;
-  color: red;
-}
+@import "scaffolding.scss";
+@import "visually-hidden.scss";
+@import "blocks/header.scss";
+@import "blocks/button.scss";

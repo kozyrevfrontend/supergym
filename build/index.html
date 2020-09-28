@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
+  <title>Supergym</title>
+  <link rel="preload" href="fonts/bebasneue-regular.woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed-light.woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed-regular.woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <header class="header">
+    <div class="header__top">
+      <a class="logo header__logo" href="#">
+        <img class="logo__image" src="img/logo.svg" alt="Фитнес-клуб Sypergym" width="89" height="20">
+      </a>
+      <a class="header__phone" href="tel:88005555555">8-800-555-55-55</a>
+    </div>
+    <div class="header__main">
+      <div class="header__main-wrapper">
+        <h1 class="header__title">Фитнес центр</h1>
+        <ul class="header__services-list">
+          <li class="header__services-item">Тренажёрный зал</li>
+          <li class="header__services-item">Групповые занятия</li>
+          <li class="header__services-item">Кардио-зона</li>
+        </ul>
+        <p class="header__city">Омск</p>
+        <a class="header__buy-link button button--light" href="#"><span>Купить абонимент</span></a>
+      </div>
+      <ul class="header__social-list">
+        <li class="header__social-item">
+          <a class="header__social-link" href="#">Fb</a>
+        </li>
+        <li class="header__social-item">
+          <a class="header__social-link" href="#">Vk</a>
+        </li>
+        <li class="header__social-item">
+          <a class="header__social-link" href="#">Ig</a>
+        </li>
+      </ul>
+    </div>
+  </header>
 </body>
 </html>
