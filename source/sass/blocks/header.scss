@@ -10,7 +10,7 @@
     background-position: left 85% top 51px, 0 0;
   }
 
-  @media (min-resolution: 1.5dppx) {
+  @media (min-resolution: $retina-dppx) {
     background-image: url("../img/header-bg-desktop@2x.jpg"), conic-gradient(from 130.31deg at 16.03% 44.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   }
 }
@@ -144,5 +144,133 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    padding-bottom: 105px;
+
+    background-image: url("../img/header-bg-tablet@1x.jpg"), conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+    background-position: right 45px top 82px, 0 0;
+    background-size: 324px 390px, auto auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/header-bg-tablet@2x.jpg"), conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+    }
+  }
+
+  .header__top {
+    margin-bottom: 71px;
+    padding-top: 40px;
+    padding-left: 44px;
+    padding-right: 45px;
+  }
+
+  .header__phone {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  .header__main-wrapper {
+    max-width: 349px;
+  }
+
+  .header__title {
+    font-size: 86px;
+    line-height: 86px;
+  }
+
+  .header__city {
+    margin-bottom: 4px;
+
+    font-size: 34px;
+    line-height: 41px;
+  }
+
+  .header__services-list {
+    padding-left: 26px;
+    margin-top: -84px;
+  }
+
+  .header__social-list {
+    display: none;
+  }
+
+  .header__buy-link {
+    width: 185px;
+    height: 61px;
+    margin-top: 85px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header {
+    padding-bottom: 79px;
+
+    background-image: conic-gradient(from 171.43deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+    background-position: 0 0;
+    background-size: auto auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: conic-gradient(from 171.43deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+    }
+  }
+
+  .header__top {
+    margin-bottom: 71px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header__phone {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .header__main {
+    max-width: 291px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .header__main-wrapper {
+    max-width: 100%;
+  }
+
+  .header__title {
+    font-size: 78px;
+    line-height: 78px;
+  }
+
+  .header__city {
+    margin-bottom: 11px;
+
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .header__services-list {
+    padding-left: 0;
+    margin-top: -79px;
+  }
+
+  .header__buy-link {
+    width: 100%;
+    height: 61px;
+    margin-top: 55px;
+    margin-left: 0;
   }
 }

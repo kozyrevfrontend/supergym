@@ -1,0 +1,13 @@
+@media (max-width: $tablet-width) {
+  .logo__image {
+    width: 82px;
+    height: 19px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .logo__image {
+    width: 68px;
+    height: 15px;
+  }
+}

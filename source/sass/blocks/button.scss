@@ -26,3 +26,18 @@
     }
   }
 }
+
+@media (max-width: $tablet-width) {
+  .button {
+    &--light {
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+}
