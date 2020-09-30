@@ -78,13 +78,14 @@
 @media (max-width: $mobile-width) {
   .video {
     width: 100%;
+    height: 52.18vw;
   }
 
   .video__img-container {
-    height: 167px;
+    height: 52.18vw;
 
     img {
-      height: 167px;
+      height: 52.18vw;
     }
   }
 }
