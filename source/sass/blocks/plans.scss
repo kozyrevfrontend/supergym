@@ -1,0 +1,23 @@
+.plans {
+  background-color: #f8f9fc;
+}
+
+.plans__tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.plans__list {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.plans__title {
+  font-family: "BebasNeue", "Arial", sans-serif;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}

@@ -60,6 +60,90 @@
         </button>
       </div>
     </section>
+    <section class="plans">
+      <h2 class="plans__title">Абонементы</h2>
+      <div class="plans__tabs tabs" id="tabs">
+        <ul class="tabs__list" role="tablist" aria-label="Список доступных тарифов">
+          <li class="tabs__item">
+            <button class="tabs__button" type="button" role="tab" aria-selected="true" aria-controls="one-month-tab" id="one">1 месяц</button>
+          </li>
+          <li class="tabs__item">
+            <button class="tabs__button" type="button" role="tab" aria-selected="false" aria-controls="six-months-tab" id="six" tabindex="-1">6 месяцев</button>
+          </li>
+          <li class="tabs__item">
+            <button class="tabs__button" type="button" role="tab" aria-selected="false" aria-controls="twelve-months-tab" id="twelve" tabindex="-1" data-deletable="">12 месяцев</button>
+          </li>
+        </ul>
+      </div>
+      <div class="plans__list">
+        <div class="plans__item" tabindex="0" role="tabpanel" id="one-month-tab" aria-labelledby="one">
+          <ul class="plans__program-list program">
+            <li class="program__item" tabindex="0">
+              <h3 class="program__title">С тренером</h3>
+              <p class="program__duration">12 занятий</p>
+              <p class="program__price">5000<span>Р</span></p>
+              <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
+            </li>
+            <li class="program__item" tabindex="0">
+              <h3 class="program__title">Дневной</h3>
+              <p class="program__duration">с 8:00 до 17:00 </p>
+              <p class="program__price">1700<span>Р</span></p>
+              <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
+            </li>
+            <li class="program__item" tabindex="0">
+              <h3 class="program__title">Полный день</h3>
+              <p class="program__duration">с 8:00 до 22:00 </p>
+              <p class="program__price">2700<span>Р</span></p>
+              <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="plans__item" tabindex="0" role="tabpanel" id="six-months-tab" aria-labelledby="six" hidden="">
+          <ul class="plans__program-list program">
+            <li class="program__item">
+              <h3 class="program__title">С тренером</h3>
+              <p class="program__duration">12 занятий</p>
+              <p class="program__price">30000<span>Р</span></p>
+              <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
+            </li>
+            <li class="program__item">
+              <h3 class="program__title">Дневной</h3>
+              <p class="program__duration">с 8:00 до 17:00 </p>
+              <p class="program__price">10200<span>Р</span></p>
+              <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
+            </li>
+            <li class="program__item">
+              <h3 class="program__title">Полный день</h3>
+              <p class="program__duration">с 8:00 до 22:00 </p>
+              <p class="program__price">16200<span>Р</span></p>
+              <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="plans__item" tabindex="0" role="tabpanel" id="twelve-months-tab" aria-labelledby="twelve" hidden="">
+          <ul class="plans__program-list program">
+            <li class="program__item">
+              <h3 class="program__title">С тренером</h3>
+              <p class="program__duration">12 занятий</p>
+              <p class="program__price">60000<span>Р</span></p>
+              <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
+            </li>
+            <li class="program__item">
+              <h3 class="program__title">Дневной</h3>
+              <p class="program__duration">с 8:00 до 17:00 </p>
+              <p class="program__price">20400<span>Р</span></p>
+              <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
+            </li>
+            <li class="program__item">
+              <h3 class="program__title">Полный день</h3>
+              <p class="program__duration">с 8:00 до 22:00 </p>
+              <p class="program__price">32400<span>Р</span></p>
+              <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script src="js/vendor.js"></script>

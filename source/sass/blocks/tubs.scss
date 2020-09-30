@@ -1,0 +1,25 @@
+.tabs__list {
+  @include list-reset;
+
+  display: flex;
+}
+
+.tabs__button {
+  margin: 0;
+  padding: 0;
+
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(#102654, 0.5%);
+
+  border: none;
+  background-color: transparent;
+
+  &[aria-selected="true"] {
+    color: #102654;
+
+    border-bottom: 2px solid #d10a42;
+  }
+}

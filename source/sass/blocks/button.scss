@@ -26,6 +26,21 @@
     }
   }
 
+  &--dark {
+    color: #102654;
+
+    border: 2px solid #102654;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
   &--play {
     position: relative;
     width: 72px;
