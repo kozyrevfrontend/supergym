@@ -3,20 +3,20 @@
 // Оптимизация вставки видео
 (function () {
   function findVideo() {
-    var video = $('.gym__video');
+    var video = $('.video__container');
 
     setupVideo(video);
   }
 
   function setupVideo(video) {
-    var link = $('.gym__video-link').removeAttr('href');
-    var button = $('.gym__video-button').on('click', function () {
+    var link = $('.video__link').removeAttr('href');
+    var button = $('.video__button').on('click', function () {
       var iframe = createIframe();
       video.remove(link);
       video.remove(button).append(iframe);
     });
 
-    video.addClass('gym__video--enabled');
+    video.addClass('video__container--enabled');
   }
 
   function createIframe() {
@@ -25,7 +25,7 @@
       allowfullscreen: ''
     });
 
-    iframe.addClass('gym__video-media');
+    iframe.addClass('video__media');
 
     return iframe;
   }

@@ -34,7 +34,7 @@
         <picture>
           <source type="image/webp" srcset="img/header-bg-desktop@1x.webp 1x, img/header-bg-desktop@2x.webp 2x">
           <!-- 1х: 500px; 2x: 1000px -->
-          <img src="img/header-bg-desktop@1x.jpg" srcset="img/header-bg-desktop@2x.jpg 2x" alt="Супер-тренер" width="500" height="556">
+          <img src="img/header-bg-desktop@1x.jpg" srcset="img/header-bg-desktop@2x.jpg 2x" alt="Супер-тренер" width="500" height="556" loading="lazy">
         </picture>
       </div>
       <ul class="header__social-list">
@@ -58,13 +58,29 @@
         <p class="gym__description">Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.</p>
         <p class="gym__description gym__description--hidden">В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</p>
       </div>
-      <div class="gym__video">
-        <a class="gym__video-link" href="https://www.youtube.com/watch?v=bnzHECC0Z8A"></a>
-        <button class="gym__video-button button button--play" aria-label="Открыть видео">
-          <svg width="17" height="17">
-            <use href="img/sprite_auto.svg#icon-play"></use>
-          </svg>
-        </button>
+      <div class="gym__img-container">
+        <picture>
+          <source type="image/webp" srcset="img/gym-desktop@1x.webp 1x, img/gym-desktop@2x.webp 2x">
+          <!-- 1х: 660px; 2x: 1320px -->
+          <img src="img/gym-desktop@1x.jpg" srcset="img/gym-desktop@1x.jpg 2x" alt="Тренажёрный зал" width="660" height="401" loading="lazy">
+        </picture>
+      </div>
+      <div class="gym__video video">
+        <div class="video__container">
+          <div class="video__img-container">
+            <picture>
+              <source type="image/webp" srcset="img/gym-video-desktop@1x.webp 1x, img/gym-video-desktop@2x.webp 2x">
+              <!-- 1х: 364px; 2x: 728px -->
+              <img src="img/gym-video-desktop@1x.jpg" srcset="img/gym-video-desktop@2x.jpg 2x" alt="Тренажёрный зал" width="364" height="228">
+            </picture>
+          </div>
+          <a class="video__link" href="https://www.youtube.com/watch?v=bnzHECC0Z8A"></a>
+          <button class="video__button button button--play" aria-label="Открыть видео">
+            <svg width="15" height="15">
+              <use href="img/sprite_auto.svg#icon-play"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
     <section class="plans">
