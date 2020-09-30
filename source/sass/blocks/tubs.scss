@@ -49,3 +49,35 @@
     border-bottom: 2px solid #d10a42;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .tabs__button {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .tabs__list {
+    margin-bottom: 44px;
+  }
+
+  .tabs__item {
+    margin-right: 54px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .tabs__button {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .tabs__list {
+    width: 290px;
+    justify-content: space-between;
+    margin-bottom: 34px;
+  }
+
+  .tabs__item {
+    margin-right: 0;
+  }
+}

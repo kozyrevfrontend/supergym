@@ -10,16 +10,21 @@
     content: "";
 
     position: absolute;
-    right: -34px;
-    bottom: -40px;
+    right: 0;
+    bottom: -150px;
     z-index: 1;
 
     display: block;
-    width: 321px;
-    height: 384px;
+    width: 287px;
+    height: 494px;
 
     background-image: url("../img/plans-bg-desktop@1x.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/plans-bg-desktop@2x.png");
+      background-size: cover;
+    }
   }
 }
 
@@ -46,4 +51,50 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
+}
+
+@media (max-width: $tablet-width) {
+  .plans {
+    padding-top: 101px;
+    padding-bottom: 100px;
+
+    &::before {
+      width: 347px;
+      height: 444px;
+      right: 0;
+      bottom: -125px;
+
+      background-image: url("../img/plans-bg-tablet@1x.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/plans-bg-tablet@2x.png");
+        background-size: cover;
+      }
+    }
+  }
+
+  .plans__title {
+    margin-bottom: 28px;
+
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .plans {
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .plans__title {
+    margin-bottom: 22px;
+
+    font-size: 32px;
+    line-height: 32px;
+  }
 }
