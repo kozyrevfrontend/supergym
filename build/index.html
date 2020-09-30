@@ -14,7 +14,7 @@
 <body>
   <header class="header">
     <div class="header__top">
-      <a class="logo header__logo" href="#">
+      <a class="logo header__logo">
         <img class="logo__image" src="img/logo.svg" alt="Фитнес-клуб Sypergym" width="89" height="20">
       </a>
       <a class="header__phone" href="tel:88005555555">8-800-555-55-55</a>
@@ -28,7 +28,7 @@
           <li class="header__services-item">Кардио-зона</li>
         </ul>
         <p class="header__city">Омск</p>
-        <a class="header__buy-link button button--light" href="#"><span>Купить абонимент</span></a>
+        <a class="header__buy-link button button--light" href="#plans"><span>Купить абонимент</span></a>
       </div>
       <div class="header__img-container">
         <picture>
@@ -71,7 +71,7 @@
             <picture>
               <source type="image/webp" srcset="img/gym-video-desktop@1x.webp 1x, img/gym-video-desktop@2x.webp 2x">
               <!-- 1х: 364px; 2x: 728px -->
-              <img src="img/gym-video-desktop@1x.jpg" srcset="img/gym-video-desktop@2x.jpg 2x" alt="Тренажёрный зал" width="364" height="228">
+              <img src="img/gym-video-desktop@1x.jpg" srcset="img/gym-video-desktop@2x.jpg 2x" alt="Тренажёрный зал" width="364" height="228" loading="lazy">
             </picture>
           </div>
           <a class="video__link" href="https://www.youtube.com/watch?v=bnzHECC0Z8A"></a>
@@ -83,7 +83,7 @@
         </div>
       </div>
     </section>
-    <section class="plans">
+    <section class="plans" id="plans">
       <h2 class="plans__title">Абонементы</h2>
       <div class="plans__tabs tabs" id="tabs">
         <ul class="tabs__list" role="tablist" aria-label="Список доступных тарифов">
@@ -104,19 +104,37 @@
             <li class="program__item" tabindex="0">
               <h3 class="program__title">С тренером</h3>
               <p class="program__duration">12 занятий</p>
-              <p class="program__price">5000<span>Р</span></p>
+              <p class="program__price">
+               <span class="program__price-shadow">5000</span>
+               <span class="program__price-value">5000</span>
+               <svg width="30" height="42">
+                 <use href="img/sprite_auto.svg#icon-rouble"></use>
+               </svg>
+              </p>
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item" tabindex="0">
               <h3 class="program__title">Дневной</h3>
               <p class="program__duration">с 8:00 до 17:00 </p>
-              <p class="program__price">1700<span>Р</span></p>
+              <p class="program__price">
+                <span class="program__price-shadow">1700</span>
+                <span class="program__price-value">1700</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite_auto.svg#icon-rouble"></use>
+                </svg>
+              </p>
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item" tabindex="0">
               <h3 class="program__title">Полный день</h3>
               <p class="program__duration">с 8:00 до 22:00 </p>
-              <p class="program__price">2700<span>Р</span></p>
+              <p class="program__price">
+                <span class="program__price-shadow">2700</span>
+                <span class="program__price-value">2700</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite_auto.svg#icon-rouble"></use>
+                </svg>
+              </p>
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
           </ul>
@@ -126,19 +144,37 @@
             <li class="program__item">
               <h3 class="program__title">С тренером</h3>
               <p class="program__duration">12 занятий</p>
-              <p class="program__price">30000<span>Р</span></p>
+              <p class="program__price">
+                <span class="program__price-shadow">30000</span>
+                <span class="program__price-value">30000</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite_auto.svg#icon-rouble"></use>
+                </svg>
+              </p>
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item">
               <h3 class="program__title">Дневной</h3>
               <p class="program__duration">с 8:00 до 17:00 </p>
-              <p class="program__price">10200<span>Р</span></p>
+              <p class="program__price">
+                <span class="program__price-shadow">10200</span>
+                <span class="program__price-value">10200</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite_auto.svg#icon-rouble"></use>
+                </svg>
+              </p>
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item">
               <h3 class="program__title">Полный день</h3>
               <p class="program__duration">с 8:00 до 22:00 </p>
-              <p class="program__price">16200<span>Р</span></p>
+              <p class="program__price">
+                <span class="program__price-shadow">16200</span>
+                <span class="program__price-value">16200</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite_auto.svg#icon-rouble"></use>
+                </svg>
+              </p>
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
           </ul>
@@ -148,19 +184,37 @@
             <li class="program__item">
               <h3 class="program__title">С тренером</h3>
               <p class="program__duration">12 занятий</p>
-              <p class="program__price">60000<span>Р</span></p>
+              <p class="program__price">
+                <span class="program__price-shadow">60000</span>
+                <span class="program__price-value">60000</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite_auto.svg#icon-rouble"></use>
+                </svg>
+              </p>
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item">
               <h3 class="program__title">Дневной</h3>
               <p class="program__duration">с 8:00 до 17:00 </p>
-              <p class="program__price">20400<span>Р</span></p>
+              <p class="program__price">
+                <span class="program__price-shadow">20400</span>
+                <span class="program__price-value">20400</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite_auto.svg#icon-rouble"></use>
+                </svg>
+              </p>
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item">
               <h3 class="program__title">Полный день</h3>
               <p class="program__duration">с 8:00 до 22:00 </p>
-              <p class="program__price">32400<span>Р</span></p>
+              <p class="program__price">
+                <span class="program__price-shadow">32400</span>
+                <span class="program__price-value">32400</span>
+                <svg width="30" height="42">
+                  <use href="img/sprite_auto.svg#icon-rouble"></use>
+                </svg>
+              </p>
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
           </ul>

@@ -7,6 +7,8 @@
 
 .program__item {
   width: 360px;
+  padding-top: 56px;
+  padding-bottom: 60px;
 
   border: 7px solid #ffffff;
   background-color: #ffffff;
@@ -27,6 +29,7 @@
 
 .program__title {
   margin: 0;
+  margin-bottom: 10px;
 
   font-size: 26px;
   font-weight: 700;
@@ -37,6 +40,7 @@
 
 .program__duration {
   margin: 0;
+  margin-bottom: 66px;
 
   font-size: 16px;
   font-weight: 400;
@@ -46,13 +50,41 @@
 }
 
 .program__price {
+  position: relative;
+
+  margin: 0;
+  margin-bottom: 33px;
+
   font-size: 60px;
   font-weight: 700;
   line-height: 90px;
+  text-align: center;
   color: #103aae;
+
+  svg {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.program__price-shadow {
+  position: absolute;
+  top: -23px;
+  left: 50%;
+
+  font-size: 100px;
+  color: rgba(#e8e8e8, 0.48%);
+
+  transform: translateX(-50%);
+}
+
+.program__price-value {
+  position: relative;
+  z-index: 10;
 }
 
 .program__link {
   width: 206px;
-  height: 64px;
+  height: 66px;
+  margin: 0 auto;
 }

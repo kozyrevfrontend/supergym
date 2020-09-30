@@ -3,29 +3,32 @@
 // Оптимизация вставки видео
 (function () {
   function findVideo() {
-    var video = $('.video__container');
+    var video = document.querySelector('.video__container');
 
     setupVideo(video);
   }
 
   function setupVideo(video) {
-    var link = $('.video__link').removeAttr('href');
-    var button = $('.video__button').on('click', function () {
+    var link = document.querySelector('.video__link');
+    link.removeAttribute('href');
+
+    var button = document.querySelector('.video__button');
+
+    button.addEventListener('click', function () {
       var iframe = createIframe();
-      video.remove(link);
-      video.remove(button).append(iframe);
+      link.remove();
+      button.remove();
+      video.appendChild(iframe);
     });
 
-    video.addClass('video__container--enabled');
+    video.classList.add('video__container--enabled');
   }
 
   function createIframe() {
-    var iframe = $('<iframe>', {
-      src: 'https://www.youtube.com/embed/bnzHECC0Z8A?rel=0&showinfo=0&autoplay=1',
-      allowfullscreen: ''
-    });
-
-    iframe.addClass('video__media');
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/bnzHECC0Z8A?rel=0&showinfo=0&autoplay=1');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.classList.add('video__media');
 
     return iframe;
   }

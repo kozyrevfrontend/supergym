@@ -1,5 +1,26 @@
 .plans {
+  position: relative;
+
+  padding-top: 120px;
+  padding-bottom: 120px;
+
   background-color: #f8f9fc;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    right: -34px;
+    bottom: -40px;
+    z-index: 1;
+
+    display: block;
+    width: 321px;
+    height: 384px;
+
+    background-image: url("../img/plans-bg-desktop@1x.png");
+    background-repeat: no-repeat;
+  }
 }
 
 .plans__tabs {
@@ -8,11 +29,16 @@
 }
 
 .plans__list {
+  position: relative;
   max-width: 1160px;
   margin: 0 auto;
+  z-index: 5;
 }
 
 .plans__title {
+  margin: 0;
+  margin-bottom: 33px;
+
   font-family: "BebasNeue", "Arial", sans-serif;
   font-size: 49px;
   font-weight: 700;
