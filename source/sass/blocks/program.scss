@@ -9,6 +9,7 @@
   width: 360px;
   padding-top: 56px;
   padding-bottom: 60px;
+  opacity: 0.99; // для корректного отображения тени цены
 
   border: 7px solid #ffffff;
   background-color: #ffffff;
@@ -67,20 +68,20 @@
   }
 }
 
-.program__price-shadow {
-  position: absolute;
-  top: -23px;
-  left: 50%;
-
-  font-size: 100px;
-  color: rgba(#e8e8e8, 0.48%);
-
-  transform: translateX(-50%);
-}
-
 .program__price-value {
-  position: relative;
-  z-index: 10;
+  &::after {
+    content: attr(data-value);
+
+    position: absolute;
+    top: -23px;
+    left: 50%;
+    z-index: -1;
+
+    font-size: 100px;
+    color: rgba(#e8e8e8, 0.48%);
+
+    transform: translateX(-50%);
+  }
 }
 
 .program__link {
@@ -138,12 +139,13 @@
     }
   }
 
-  .program__price-shadow {
-    position: absolute;
-    top: -44px;
-    left: 50%;
+  .program__price-value {
+    &::after {
+      top: -44px;
+      left: 50%;
 
-    font-size: 80px;
-    line-height: 120px;
+      font-size: 80px;
+      line-height: 120px;
+    }
   }
 }
