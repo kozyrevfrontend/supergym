@@ -1,8 +1,10 @@
 .header {
   padding-bottom: 47px;
 
+  background: url("../img/header-bg.svg"); // для IE11
   background-image: conic-gradient(from 130.31deg at 16.03% 44.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header__top {
