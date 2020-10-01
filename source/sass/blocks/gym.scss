@@ -9,13 +9,13 @@
 
 .gym__wrapper {
   max-width: 410px;
-  padding-top: 50px;
+  padding-top: 45px;
   padding-left: 60px;
 }
 
 .gym__title {
   margin: 0;
-  margin-bottom: 4px;
+  margin-bottom: 9px;
 
   font-family: "BebasNeue", "Arial", sans-serif;
   font-size: 49px;
@@ -74,7 +74,7 @@
   .gym {
     flex-direction: column;
     align-items: center;
-    padding-top: 101px;
+    padding-top: 96px;
     padding-bottom: 12px;
   }
 
@@ -89,7 +89,7 @@
   }
 
   .gym__title {
-    margin-bottom: 6px;
+    margin-bottom: 11px;
 
     font-size: 42px;
     line-height: 42px;
@@ -133,7 +133,7 @@
 
 @media (max-width: $mobile-width) {
   .gym {
-    padding-top: 70px;
+    padding-top: 67px;
     padding-bottom: 70px;
     margin-bottom: 0;
   }
@@ -145,7 +145,7 @@
   }
 
   .gym__title {
-    margin-bottom: 4px;
+    margin-bottom: 7px;
 
     font-size: 32px;
     line-height: 32px;
