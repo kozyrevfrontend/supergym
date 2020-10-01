@@ -43,6 +43,8 @@
   border: none;
   background-color: transparent;
 
+  cursor: pointer;
+
   &[aria-selected="true"] {
     color: #102654;
 

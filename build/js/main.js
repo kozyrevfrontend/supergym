@@ -1,5 +1,11 @@
 'use strict';
 
+// Активация полифила svg4everybody
+
+(function () {
+  svg4everybody();
+})();
+
 // Оптимизация вставки видео
 (function () {
   function findVideo() {
