@@ -92,6 +92,17 @@
       }
     }
 
+    &--light-border {
+      border: 2px solid #ffffff;
+    }
+
+    &--light-font {
+      span {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+
     &--play {
       width: 52px;
       height: 52px;
