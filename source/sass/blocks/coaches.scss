@@ -1,0 +1,113 @@
+.coaches {
+  max-width: 1272px;
+  margin: 0 auto;
+  padding-top: 57px;
+  padding-bottom: 120px;
+}
+
+.coaches__title {
+  margin: 0;
+  margin-bottom: 53px;
+  padding-left: 58px;
+
+  font-family: "BebasNeue", "Arial", sans-serif;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: #102654;
+}
+
+.coaches__container {
+  position: relative;
+
+  padding-left: 56px;
+  padding-right: 56px;
+
+  overflow: hidden;
+}
+
+.coaches__container-inner {
+  overflow: hidden;
+}
+
+.coaches__list {
+  @include list-reset;
+
+  display: flex;
+}
+
+.coaches__item {
+  flex-shrink: 0;
+}
+
+.coaches__button {
+  position: absolute;
+  top: 50%;
+
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  transform: translateY(-50%);
+
+  cursor: pointer;
+
+  svg {
+    fill: none;
+  }
+
+  &--next {
+    right: 0;
+  }
+
+  &--prev {
+    left: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .coaches {
+    max-width: 678px;
+    padding-top: 36px;
+    padding-bottom: 100px;
+  }
+
+  .coaches__title {
+    margin-bottom: 44px;
+    padding-left: 0;
+    text-align: center;
+
+    font-size: 42px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .coaches {
+    max-width: 290px;
+    padding-top: 27px;
+    padding-bottom: 70px;
+  }
+
+  .coaches__title {
+    margin-bottom: 45px;
+
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .coaches__container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .coaches__button {
+    svg {
+      width: 10px;
+      height: 19px;
+    }
+  }
+}
