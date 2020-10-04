@@ -48,8 +48,5 @@
   ],
   "engines": {
     "node": "8.15"
-  },
-  "dependencies": {
-    "del": "^4.1.1"
   }
 }
