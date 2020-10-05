@@ -8,11 +8,14 @@
 .features__wrapper {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 340px 5.76% 240px 5.76% 340px;
+  grid-template-rows: auto 154px auto;
+  -ms-grid-columns: 340px 60px 240px 60px 340px;
+  -ms-grid-rows: auto 154px auto;
+  align-items: center;
   max-width: 1040px;
-  min-height: 316px;
   margin: 0 auto;
 
   &::before {
@@ -62,6 +65,26 @@
 
   display: flex;
   justify-content: space-between;
+
+  &:first-child {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    -ms-grid-row: 1;
+  }
+
+  &:last-child {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 6;
+    -ms-grid-row: 3;
+  }
 }
 
 .features__item {
@@ -78,6 +101,8 @@
 
   img {
     margin-right: 30px;
+    margin-top: 5px;
+    height: 71px;
     order: 1;
   }
 }
@@ -107,20 +132,21 @@
 }
 
 .features__accent {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-
   width: 240px;
-  min-height: 97.15%;
   padding-top: 45px;
   padding-bottom: 45px;
   padding-left: 34px;
   padding-right: 34px;
 
-  background-color: #1c3374;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  -ms-grid-column: 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 4;
 
-  transform: translateX(-50%);
+  background-color: #1c3374;
 }
 
 .features__accent-title {
@@ -142,6 +168,7 @@
 
 .features__accent-description {
   margin: 0;
+  margin-bottom: 13px;
 
   font-size: 16px;
   font-weight: 400;
@@ -227,6 +254,7 @@
 
     img {
       margin-right: 30px;
+      margin-top: 0;
       order: 1;
     }
   }
@@ -250,7 +278,7 @@
     margin: 0 auto;
     margin-bottom: 49px;
     padding-top: 27px;
-    padding-bottom: 38px;
+    padding-bottom: 25px;
     padding-left: 34px;
     padding-right: 34px;
 
@@ -354,7 +382,7 @@
     width: 100%;
     margin-bottom: 49px;
     padding-top: 38px;
-    padding-bottom: 43px;
+    padding-bottom: 30px;
     padding-left: 34px;
     padding-right: 34px;
 
