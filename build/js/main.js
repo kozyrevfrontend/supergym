@@ -1,9 +1,13 @@
 'use strict';
 
 // Активация полифила svg4everybody
-
 (function () {
   svg4everybody();
+})();
+
+// Активация полифила object-fit: cover
+(function () {
+  objectFitImages();
 })();
 
 // Оптимизация вставки видео

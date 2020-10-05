@@ -2,17 +2,24 @@
   @include list-reset;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .program__item {
   width: 360px;
+  margin-right: 40px;
   padding-top: 56px;
   padding-bottom: 60px;
+  margin-bottom: 30px;
   opacity: 0.99; // для корректного отображения тени цены
 
   border: 7px solid #ffffff;
   background-color: #ffffff;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:hover,
   &:focus {
@@ -100,6 +107,7 @@
   .program__item {
     width: 440px;
     margin-bottom: 40px;
+    margin-right: 0;
 
     &:last-child {
       margin-bottom: 0;
