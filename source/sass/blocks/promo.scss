@@ -98,7 +98,6 @@
 }
 
 .promo__img-container {
-  display: flex;
   width: 50%;
 
   line-height: 0;
@@ -177,5 +176,75 @@
     height: 1px;
 
     background-color: #1c3374;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .promo {
+    padding-top: 96px;
+    padding-bottom: 50px;
+  }
+
+  .promo__wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .promo__main-title {
+    margin-bottom: 44px;
+
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  .promo__special {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 29px;
+  }
+
+  .promo__special-wrapper {
+    width: 41.2%;
+    padding-top: 2px;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-bottom: 28px;
+  }
+
+  .promo__img-container {
+    flex-grow: 1;
+    width: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  .promo__list {
+    @include list-reset;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .promo__item {
+    width: 47.8%;
+    margin-bottom: 0;
+    padding: 22px 28px;
+
+    &--free-month {
+      .promo__description {
+        padding-right: 27px;
+        margin-bottom: 46px;
+      }
+    }
   }
 }
