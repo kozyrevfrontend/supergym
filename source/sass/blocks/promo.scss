@@ -41,7 +41,7 @@
   background-color: #ed0233;
 }
 
-.promo__special--title {
+.promo__special-title {
   width: 142px;
   margin: 0;
   margin-bottom: 19px;
@@ -94,6 +94,15 @@
     height: 1px;
 
     background-color: #ffffff;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
@@ -177,6 +186,15 @@
 
     background-color: #1c3374;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -214,6 +232,17 @@
     padding-bottom: 28px;
   }
 
+  .promo__special-link {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+
   .promo__img-container {
     flex-grow: 1;
     width: auto;
@@ -246,5 +275,125 @@
         margin-bottom: 46px;
       }
     }
+  }
+
+  .promo__link {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .promo {
+    padding-top: 67px;
+    padding-bottom: 35px;
+  }
+
+  .promo__wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .promo__main-title {
+    margin-bottom: 45px;
+
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .promo__special {
+    flex-direction: column;
+
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .promo__special-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 2px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 27px;
+  }
+
+  .promo__special-title {
+    margin-bottom: 14px;
+
+    text-align: center;
+  }
+
+  .promo__special-description {
+    margin-bottom: 31px;
+
+    text-align: center;
+  }
+
+  .promo__img-container {
+    width: 100%;
+    height: 93.43vw;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  .promo__list {
+    @include list-reset;
+
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .promo__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 34px 28px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--free-month {
+      .promo__description {
+        padding-right: 0;
+        margin-bottom: 28px;
+      }
+    }
+
+    &--discount {
+      .promo__description {
+        padding: 0 27px;
+      }
+    }
+  }
+
+  .promo__title {
+    text-align: center;
+  }
+
+  .promo__description {
+    margin-bottom: 28px;
+
+    text-align: center;
+  }
+
+  .promo__link {
+    margin-bottom: 5px;
   }
 }
