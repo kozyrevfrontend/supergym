@@ -473,11 +473,41 @@
         </ul>
       </div>
     </section>
+    <section class="feedback">
+      <h2 class="feedback__title">Отзывы</h2>
+      <div class="feedback__container">
+        <ul class="feedback__list">
+          <li class="feedback__item comment">
+            <blockquote>
+              <h3>Анна Орлова</h3>
+              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+            </blockquote>
+            <div class="comment__img-container">
+              <picture>
+                <source type="image/webp" srcset="img/feedback-avatar-orlova@1x.webp 1x, img/feedback-avatar-orlova@2x.webp 2x">
+                <!-- 1х: 80px; 2x: 160px -->
+                <img src="img/feedback-avatar-orlova@1x.png" srcset="img/feedback-avatar-orlova@2x.png 2x" alt="Анна Орлова" width="80" height="80">
+              </picture>
+            </div>
+          </li>
+        </ul>
+        <button class="feedback__button feedback__button--next">
+          <svg width="18" height="32">
+            <use href="img/sprite_auto.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+        <button class="feedback__button feedback__button--prev">
+          <svg width="18" height="32">
+            <use href="img/sprite_auto.svg#icon-arrow-left"></use>
+          </svg>
+        </button>
+      </div>
+    </section>
   </main>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
   <script>
-    var swiper = new Swiper('.swiper-container', {
+    var swiperCoaches = new Swiper('.coaches__container-inner', {
       breakpoints: {
         1024: {
           slidesPerView: 4,
