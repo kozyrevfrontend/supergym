@@ -1,0 +1,20 @@
+.site-list {
+  @include list-reset;
+}
+
+.site-list__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #ffffff;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.6;
+  }
+}

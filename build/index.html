@@ -102,9 +102,10 @@
       </div>
       <div class="plans__list">
         <div class="plans__item" role="tabpanel" id="one-month-tab" aria-labelledby="one">
+          <h3 class="visually-hidden">Абонемент на 1 месяц</h3>
           <ul class="plans__program-list program">
             <li class="program__item">
-              <h3 class="program__title">С тренером</h3>
+              <h4 class="program__title">С тренером</h4>
               <p class="program__duration">12 занятий</p>
               <p class="program__price">
                <span class="program__price-value" data-value="5000">5000</span>
@@ -115,7 +116,7 @@
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item">
-              <h3 class="program__title">Дневной</h3>
+              <h4 class="program__title">Дневной</h4>
               <p class="program__duration">с 8:00 до 17:00 </p>
               <p class="program__price">
                 <span class="program__price-value" data-value="1700">1700</span>
@@ -126,7 +127,7 @@
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item">
-              <h3 class="program__title">Полный день</h3>
+              <h4 class="program__title">Полный день</h4>
               <p class="program__duration">с 8:00 до 22:00 </p>
               <p class="program__price">
                 <span class="program__price-value" data-value="2700">2700</span>
@@ -139,9 +140,10 @@
           </ul>
         </div>
         <div class="plans__item" role="tabpanel" id="six-months-tab" aria-labelledby="six" hidden="">
+          <h3 class="visually-hidden">Абонемент на 6 месяцев</h3>
           <ul class="plans__program-list program">
             <li class="program__item">
-              <h3 class="program__title">С тренером</h3>
+              <h4 class="program__title">С тренером</h4>
               <p class="program__duration">12 занятий</p>
               <p class="program__price">
                 <span class="program__price-value" data-value="30000">30000</span>
@@ -152,7 +154,7 @@
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item">
-              <h3 class="program__title">Дневной</h3>
+              <h4 class="program__title">Дневной</h4>
               <p class="program__duration">с 8:00 до 17:00 </p>
               <p class="program__price">
                 <span class="program__price-value" data-value="10200">10200</span>
@@ -163,7 +165,7 @@
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item">
-              <h3 class="program__title">Полный день</h3>
+              <h4 class="program__title">Полный день</h4>
               <p class="program__duration">с 8:00 до 22:00 </p>
               <p class="program__price">
                 <span class="program__price-value" data-value="16200">16200</span>
@@ -176,9 +178,10 @@
           </ul>
         </div>
         <div class="plans__item" role="tabpanel" id="twelve-months-tab" aria-labelledby="twelve" hidden="">
+          <h3 class="visually-hidden">Абонемент на 12 месяцев</h3>
           <ul class="plans__program-list program">
             <li class="program__item">
-              <h3 class="program__title">С тренером</h3>
+              <h4 class="program__title">С тренером</h4>
               <p class="program__duration">12 занятий</p>
               <p class="program__price">
                 <span class="program__price-value" data-value="60000">60000</span>
@@ -189,7 +192,7 @@
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item">
-              <h3 class="program__title">Дневной</h3>
+              <h4 class="program__title">Дневной</h4>
               <p class="program__duration">с 8:00 до 17:00 </p>
               <p class="program__price">
                 <span class="program__price-value" data-value="20400">20400</span>
@@ -200,7 +203,7 @@
               <a class="program__link button button--dark" href="#"><span>Купить абонимент</span></a>
             </li>
             <li class="program__item">
-              <h3 class="program__title">Полный день</h3>
+              <h4 class="program__title">Полный день</h4>
               <p class="program__duration">с 8:00 до 22:00 </p>
               <p class="program__price">
                 <span class="program__price-value" data-value="32400">32400</span>
@@ -503,7 +506,103 @@
         </button>
       </div>
     </section>
+    <div class="main__wrapper">
+      <section class="form">
+        <div class="form__wrapper">
+          <h2 class="form__title">Бесплатное занятие</h2>
+          <form action="https://echo.htmlacademy.ru" method="POST">
+            <div class="form__input-wrapper">
+              <p>
+                <label class="visually-hidden" for="name">Введите ваше имя</label>
+                <input type="text" id="name" placeholder="Имя" required="">
+              </p>
+              <p>
+                <label class="visually-hidden" for="phone">Введите номер телефона</label>
+                <input type="text" id="phone" inputmode="numeric" placeholder="Телефон" required="">
+              </p>
+            </div>
+            <button class="form__button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+      <section class="contacts">
+        <h2 class="contacts__title">Контакты</h2>
+        <div class="contacts__wrapper">
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <h3 class="contacts__item-title">Адрес:</h3>
+              <p class="contacts__description">г. Омск, ул. 60 лет Октября, 7</p>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__item-title">График работы:</h3>
+              <p class="contacts__description">Пн-Вс: с 8:00 до 22:00</p>
+            </li>
+          </ul>
+          <ul class="contacts__list">
+            <li class="contacts__item">
+              <h3 class="contacts__item-title">Телефон:</h3>
+              <p class="contacts__description">
+                <a class="contacts__link" href="tel:88005555555">8-800-555-55-55</a>
+              </p>
+            </li>
+            <li class="contacts__item">
+              <h3 class="contacts__item-title">Email:</h3>
+              <p class="contacts__description">
+                <a class="contacts__link" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </main>
+  <footer class="footer">
+    <a class="logo footer__logo">
+      <img class="logo__image" src="img/logo.svg" alt="Фитнес-клуб Sypergym" width="89" height="20">
+    </a>
+    <nav class="footer__navigation">
+      <ul class="site-list">
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">Услуги</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">Абонементы</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">Акции</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">Тренеры</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="#">Расписание</a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="footer__social social-list">
+      <li class="social-list__item">
+        <a class="social__link" href="#" aria-label="Мы во Вконтакте">
+          <svg width="24" height="13">
+            <use href="img/sprite_auto.svg#icon-vk"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social__link" href="#" aria-label="Мы в Инстаграм">
+          <svg width="24" height="24">
+            <use href="img/sprite_auto.svg#icon-insta"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social__link" href="#" aria-label="Мы в Фейсбук">
+          <svg width="12" height="24">
+            <use href="img/sprite_auto.svg#icon-fb"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </footer>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
   <script>
