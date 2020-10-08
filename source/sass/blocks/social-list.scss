@@ -43,3 +43,38 @@
     }
   }
 }
+
+@media (max-width: $mobile-width) {
+  .social-list {
+    align-items: center;
+  }
+
+  .social-list__item {
+    padding-top: 14px;
+    margin-right: 35px;
+  }
+
+  .social-list__link {
+    &--vk {
+      svg {
+        width: 32px;
+        height: 17px;
+      }
+    }
+
+    &--insta {
+      svg {
+        width: 27px;
+        height: 27px;
+      }
+    }
+
+    &--fb {
+      svg {
+        width: 14px;
+        height: 27px;
+      }
+    }
+  }
+}
+
