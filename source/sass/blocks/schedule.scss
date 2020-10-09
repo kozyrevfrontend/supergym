@@ -1,0 +1,97 @@
+.schedule__container {
+  width: 84.69%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.schedule__title {
+  margin: 0;
+  margin-bottom: 54px;
+  padding-top: 116px;
+
+  font-family: "BebasNeue", "Arial", sans-serif;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #102654;
+}
+
+.schedule__time-list {
+  @include list-reset;
+
+  width: 5.61%;
+  margin-top: 74px;
+  margin-right: 8px;
+}
+
+.schedule__time-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #15367a;
+
+  border: 2px solid #1c3374;
+}
+
+.schedule__main-list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+  width: 93.69%;
+}
+
+.schedule__main-item {
+  width: 13.75%;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.schedule__day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 8px;
+  height: 66px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  color: #15367a;
+
+  border: 2px solid #1c3374;
+}
+
+.schedule__training-list {
+  @include list-reset;
+}
+
+.schedule__training-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110px;
+  margin-bottom: 8px;
+
+  border: 2px solid transparent;
+  background-color: #f8f9fc;
+
+  label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #102654;
+  }
+}

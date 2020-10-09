@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Supergym</title>
+  <link rel="preload" href="fonts/bebasneue.woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed-light.woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed-regular.woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed-bold.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <main class="schedule">
+    <h1 class="schedule__title">Расписание</h1>
+    <div class="schedule__container">
+      <ul class="schedule__time-list">
+        <li class="schedule__time-item"><span>08:00</span></li>
+        <li class="schedule__time-item"><span>12:00</span></li>
+        <li class="schedule__time-item"><span>18:00</span></li>
+        <li class="schedule__time-item"><span>20:00</span></li>
+      </ul>
+      <ul class="schedule__main-list">
+        <li class="schedule__main-item">
+          <h2 class="schedule__day"><span>Понедельник</span></h2>
+          <ul class="schedule__training-list">
+            <li class="schedule__training-item">
+              <label for="8:00-Monday-CrossFit">CrossFit</label>
+              <input class="visually-hidden" type="checkbox" id="08:00-Monday-CrossFit" name="8:00-Monday-CrossFit" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="12:00-Monday-BodySculpt">Body Sculpt</label>
+              <input class="visually-hidden" type="checkbox" id="12:00-Monday-BodySculpt" name="12:00-Monday-BodySculpt" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="18:00-Monday-Functional">Functional</label>
+              <input class="visually-hidden" type="checkbox" id="18:00-Monday-Functional" name="18:00-Monday-Functional" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="20:00-Monday-Stretching">Stretching</label>
+              <input class="visually-hidden" type="checkbox" id="20:00-Monday-Stretching" name="20:00-Monday-Stretching" form="schedule__form">
+            </li>
+          </ul>
+          <button class="visually-hidden" aria-label="Открыть расписание"></button>
+        </li>
+        <li class="schedule__main-item">
+          <h2 class="schedule__day"><span>Вторник</span></h2>
+          <ul class="schedule__training-list">
+            <li class="schedule__training-item">
+              <label for="8:00-Tuesday-Aerostretching">Aerostretching</label>
+              <input class="visually-hidden" type="checkbox" id="08:00-Tuesday-Aerostretching" name="8:00-Tuesday-Aerostretching" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="12:00-Tuesday-CrossFit">CrossFit</label>
+              <input class="visually-hidden" type="checkbox" id="12:00-Tuesday-CrossFit" name="12:00-Tuesday-CrossFit" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="18:00-Tuesday-BodySculpt">Body Sculpt</label>
+              <input class="visually-hidden" type="checkbox" id="18:00-Tuesday-BodySculpt" name="18:00-Tuesday-BodySculpt" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="20:00-Tuesday-Functional">Functional</label>
+              <input class="visually-hidden" type="checkbox" id="20:00-Tuesday-Functional" name="20:00-Tuesday-Functional" form="schedule__form">
+            </li>
+          </ul>
+          <button class="visually-hidden" aria-label="Открыть расписание"></button>
+        </li>
+        <li class="schedule__main-item">
+          <h2 class="schedule__day"><span>Среда</span></h2>
+          <ul class="schedule__training-list">
+            <li class="schedule__training-item">
+              <label for="8:00-Wednesday-HotIron">Hot Iron</label>
+              <input class="visually-hidden" type="checkbox" id="08:00-Wednesday-HotIron" name="8:00-Wednesday-HotIron" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="12:00-Wednesday-Aerostretching">Aerostretching</label>
+              <input class="visually-hidden" type="checkbox" id="12:00-Wednesday-Aerostretching" name="12:00-Wednesday-Aerostretching" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="18:00-Wednesday-CrossFit">CrossFit</label>
+              <input class="visually-hidden" type="checkbox" id="18:00-Wednesday-CrossFit" name="18:00-Wednesday-CrossFit" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="20:00-Wednesday-BodySculpt">Body Sculpt</label>
+              <input class="visually-hidden" type="checkbox" id="20:00-Wednesday-BodySculpt" name="20:00-Wednesday-BodySculpt" form="schedule__form">
+            </li>
+          </ul>
+          <button class="visually-hidden" aria-label="Открыть расписание"></button>
+        </li>
+        <li class="schedule__main-item">
+          <h2 class="schedule__day"><span>Четверг</span></h2>
+          <ul class="schedule__training-list">
+            <li class="schedule__training-item">
+              <label for="8:00-Thursday-Pilates">Pilates</label>
+              <input class="visually-hidden" type="checkbox" id="08:00-Thursday-Pilates" name="8:00-Thursday-Pilates" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="12:00-Thursday-HotIron">Hot Iron</label>
+              <input class="visually-hidden" type="checkbox" id="12:00-Thursday-HotIron" name="12:00-Thursday-HotIron" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="18:00-Thursday-Aerostretching">Aerostretching</label>
+              <input class="visually-hidden" type="checkbox" id="18:00-Thursday-Aerostretching" name="18:00-Thursday-Aerostretching" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="20:00-Thursday-CrossFit">CrossFit</label>
+              <input class="visually-hidden" type="checkbox" id="20:00-Thursday-CrossFit" name="20:00-Thursday-CrossFit" form="schedule__form">
+            </li>
+          </ul>
+          <button class="visually-hidden" aria-label="Открыть расписание"></button>
+        </li>
+        <li class="schedule__main-item">
+          <h2 class="schedule__day"><span>Пятница</span></h2>
+          <ul class="schedule__training-list">
+            <li class="schedule__training-item">
+              <label for="8:00-Friday-Stretching">Stretching</label>
+              <input class="visually-hidden" type="checkbox" id="08:00-Friday-Stretching" name="8:00-Friday-Stretching" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="12:00-Friday-Pilates">Pilates</label>
+              <input class="visually-hidden" type="checkbox" id="12:00-Friday-Pilates" name="12:00-Friday-Pilates" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="18:00-Friday-HotIron">Hot Iron</label>
+              <input class="visually-hidden" type="checkbox" id="18:00-Friday-HotIron" name="18:00-Friday-HotIron" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="20:00-Friday-Aerostretching">Aerostretching</label>
+              <input class="visually-hidden" type="checkbox" id="20:00-Friday-Aerostretching" name="20:00-Friday-Aerostretching" form="schedule__form">
+            </li>
+          </ul>
+          <button class="visually-hidden" aria-label="Открыть расписание"></button>
+        </li>
+        <li class="schedule__main-item">
+          <h2 class="schedule__day"><span>Суббота</span></h2>
+          <ul class="schedule__training-list">
+            <li class="schedule__training-item">
+              <label for="8:00-Saturday-Functional">Functional</label>
+              <input class="visually-hidden" type="checkbox" id="08:00-Saturday-Functional" name="8:00-Saturday-Functional" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="12:00-Saturday-Stretching">Stretching</label>
+              <input class="visually-hidden" type="checkbox" id="12:00-Saturday-Stretching" name="12:00-Saturday-Stretching" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="18:00-Saturday-Pilates">Pilates</label>
+              <input class="visually-hidden" type="checkbox" id="18:00-Saturday-Pilates" name="18:00-Saturday-Pilates" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="20:00-Saturday-HotIron">Hot Iron</label>
+              <input class="visually-hidden" type="checkbox" id="20:00-Saturday-HotIron" name="20:00-Saturday-HotIron" form="schedule__form">
+            </li>
+          </ul>
+          <button class="visually-hidden" aria-label="Открыть расписание"></button>
+        </li>
+        <li class="schedule__main-item">
+          <h2 class="schedule__day"><span>Воскресенье</span></h2>
+          <ul class="schedule__training-list">
+            <li class="schedule__training-item">
+              <label for="8:00-Sunday-BodySculpt">Body Sculpt</label>
+              <input class="visually-hidden" type="checkbox" id="08:00-Sunday-BodySculpt" name="8:00-Sunday-BodySculpt" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="12:00-Sunday-Functional">Functional</label>
+              <input class="visually-hidden" type="checkbox" id="12:00-Sunday-Functional" name="12:00-Sunday-Functional" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="18:00-Sunday-Stretching">Stretching</label>
+              <input class="visually-hidden" type="checkbox" id="18:00-Sunday-Stretching" name="18:00-Sunday-Stretching" form="schedule__form">
+            </li>
+            <li class="schedule__training-item">
+              <label for="20:00-Sunday-Pilates">Pilates</label>
+              <input class="visually-hidden" type="checkbox" id="20:00-Sunday-Pilates" name="20:00-Sunday-Pilates" form="schedule__form">
+            </li>
+          </ul>
+          <button class="visually-hidden" aria-label="Открыть расписание"></button>
+        </li>
+      </ul>
+    </div>
+    <form class="visually-hidden" id="schedule__form" action="https://echo.htmlacademy.ru"><button type="submit"></button></form>
+  </main>
+</body>
+</html>
