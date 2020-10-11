@@ -284,7 +284,7 @@
 
 // Слайдеры
 (function () {
-  var CreateSlider = function(domNode, config) {
+  var CreateSlider = function (domNode, config) {
     this.slidesContainer = domNode;
     this.slider = this.slidesContainer.querySelector('.slider');
     this.slides = this.slider.querySelectorAll('.slide');
@@ -313,17 +313,17 @@
       });
     },
 
-    findSuitableCfg: function() {
+    findSuitableCfg: function () {
       var suitableCfg = this.config.find((cfg) => window.matchMedia(`(min-width: ${cfg.screenWidth}px)`).matches);
 
       return suitableCfg;
     },
 
-    setPosition: function() {
+    setPosition: function () {
       this.slider.style.transform = 'translateX(' + this.position + 'px)';
     },
 
-    checkBtns: function() {
+    checkBtns: function () {
       var myConfig = this.findSuitableCfg();
 
       if (this.position === 0) {
@@ -425,4 +425,14 @@
 
   var coachesSlider = new CreateSlider(document.querySelector('.coaches__container-inner'), configCoaches);
   var feedbackSlider = new CreateSlider(document.querySelector('.feedback__container-inner'), configFeedback);
+})();
+
+// Валидация поля ввода телефона
+(function () {
+  var phoneInput = document.querySelector('#user-phone');
+
+  phoneInput.addEventListener('keyup', function (evt) {
+    var target = evt.target;
+    target.value = this.value.replace(/[a-zA-Zа-яёА-ЯЁ]/g, '');
+  });
 })();
