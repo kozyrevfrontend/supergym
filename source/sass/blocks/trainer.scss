@@ -1,6 +1,7 @@
 .trainer {
   position: relative;
 
+  width: 260px;
   min-height: 294px;
 
   &:hover {
@@ -117,7 +118,11 @@
   }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: 1300px) {
+  .trainer {
+    width: 268px;
+  }
+
   .trainer__img-container {
     img {
       width: 100%;
@@ -138,6 +143,7 @@
 
 @media (max-width: $mobile-width) {
   .trainer {
+    width: 226px;
     min-height: 274px;
   }
 

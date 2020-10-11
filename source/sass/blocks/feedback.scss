@@ -23,7 +23,9 @@
   margin: 0 auto;
   padding-left: 56px;
   padding-right: 56px;
+}
 
+.feedback__container-inner {
   overflow: hidden;
 }
 
@@ -31,6 +33,10 @@
   @include list-reset;
 
   display: flex;
+}
+
+.feedback__item {
+  flex-shrink: 0;
 }
 
 .feedback__button {

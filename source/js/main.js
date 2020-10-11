@@ -281,3 +281,148 @@
     return delay;
   }
 }());
+
+// Слайдеры
+(function () {
+  var CreateSlider = function(domNode, config) {
+    this.slidesContainer = domNode;
+    this.slider = this.slidesContainer.querySelector('.slider');
+    this.slides = this.slider.querySelectorAll('.slide');
+    this.prevBtn = this.slidesContainer.querySelector('.prev');
+    this.nextBtn = this.slidesContainer.querySelector('.next');
+    this.slidesCount = this.slides.length;
+    this.position = 0;
+    this.config = config;
+
+    this.init();
+  };
+
+  CreateSlider.prototype = {
+    init: function () {
+      var self = this;
+
+      this.checkBtns();
+      this.addClick();
+
+      this.slider.style.transition = '0.5s';
+
+      window.addEventListener('resize', function () {
+        self.checkBtns();
+
+        self.addClick();
+      });
+    },
+
+    findSuitableCfg: function() {
+      var suitableCfg = this.config.find((cfg) => window.matchMedia(`(min-width: ${cfg.screenWidth}px)`).matches);
+
+      return suitableCfg;
+    },
+
+    setPosition: function() {
+      this.slider.style.transform = 'translateX(' + this.position + 'px)';
+    },
+
+    checkBtns: function() {
+      var myConfig = this.findSuitableCfg();
+
+      if (this.position === 0) {
+        this.prevBtn.setAttribute('disabled', 'disabled');
+      } else {
+        this.prevBtn.removeAttribute('disabled');
+      }
+
+      if (this.position <= -(this.slidesCount - myConfig.slidesToShow) * (myConfig.slideWidth + myConfig.slideGap)) {
+          this.nextBtn.setAttribute('disabled', 'disabled');
+      } else {
+        this.nextBtn.removeAttribute('disabled');
+      }
+    },
+
+    addClick: function() {
+      var myConfig = this.findSuitableCfg();
+      var self = this;
+
+      this.prevBtn.addEventListener('click', function () {
+        var slidesLeft = Math.abs(self.position) / (myConfig.slideWidth + myConfig.slideGap);
+        var movePosition = (myConfig.slideWidth + myConfig.slideGap) * myConfig.slidesToScroll;
+
+        if (slidesLeft >= myConfig.slidesToScroll) {
+          self.position += movePosition;
+        } else {
+          self.position += slidesLeft * (myConfig.slideWidth + myConfig.slideGap);
+        }
+
+        self.setPosition();
+        self.checkBtns();
+      });
+
+      this.nextBtn.addEventListener('click', function () {
+        var slidesLeft = Math.floor(self.slidesCount - (Math.abs(self.position) + myConfig.slidesToShow * myConfig.slideWidth + (myConfig.slidesToShow - 1) * myConfig.slideGap) / (myConfig.slideWidth + myConfig.slideGap));
+        var movePosition = (myConfig.slideWidth + myConfig.slideGap) * myConfig.slidesToScroll;
+
+        if (slidesLeft >= myConfig.slidesToScroll) {
+          self.position -= movePosition;
+        } else {
+          self.position -= slidesLeft * (myConfig.slideWidth + myConfig.slideGap);
+        }
+
+        self.setPosition();
+        self.checkBtns();
+      });
+    }
+  }
+
+
+
+  var configCoaches = [
+    {
+      screenWidth: 1301,
+      slidesToScroll: 1,
+      slidesToShow: 4,
+      slideWidth: 260,
+      slideGap: 40
+    },
+    {
+      screenWidth: 768,
+      slidesToScroll: 1,
+      slidesToShow: 2,
+      slideWidth: 268,
+      slideGap: 30
+    },
+    {
+      screenWidth: 320,
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      slideWidth: 226,
+      slideGap: 30
+    }
+  ];
+
+  var configFeedback = [
+    {
+      screenWidth: 1024,
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      slideWidth: 560,
+      slideGap: 0
+    },
+    {
+      screenWidth: 768,
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      slideWidth: 566,
+      slideGap: 0
+    },
+    {
+      screenWidth: 320,
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      slideWidth: 226,
+      slideGap: 0
+    }
+  ];
+
+  var coachesSlider = new CreateSlider(document.querySelector('.coaches__container-inner'), configCoaches);
+  var feedbackSlider = new CreateSlider(document.querySelector('.feedback__container-inner'), configFeedback);
+})();

@@ -244,9 +244,9 @@
     <section class="coaches">
       <h2 class="coaches__title">Тренеры</h2>
       <div class="coaches__container">
-        <div class="coaches__container-inner swiper-container">
-          <ul class="coaches__list swiper-wrapper">
-            <li class="coaches__item swiper-slide trainer">
+        <div class="coaches__container-inner">
+          <ul class="coaches__list slider">
+            <li class="coaches__item slide trainer">
               <div class="trainer__wrapper-inner">
                 <h3>Анна Павлова</h3>
                 <p>CrossFit</p>
@@ -264,7 +264,7 @@
                 </div>
               </div>
             </li>
-            <li class="coaches__item swiper-slide trainer">
+            <li class="coaches__item slide trainer">
               <div class="trainer__wrapper-inner">
                 <h3>Алексей Лавров</h3>
                 <p>CrossFit</p>
@@ -282,7 +282,7 @@
                 </div>
               </div>
             </li>
-            <li class="coaches__item swiper-slide trainer">
+            <li class="coaches__item slide trainer">
               <div class="trainer__wrapper-inner">
                 <h3>Александр Пашков</h3>
                 <p>CrossFit</p>
@@ -300,7 +300,7 @@
                 </div>
               </div>
             </li>
-            <li class="coaches__item swiper-slide trainer">
+            <li class="coaches__item slide trainer">
               <div class="trainer__wrapper-inner">
                 <h3>Мария Кетова</h3>
                 <p>CrossFit</p>
@@ -318,7 +318,7 @@
                 </div>
               </div>
             </li>
-            <li class="coaches__item swiper-slide trainer">
+            <li class="coaches__item slide trainer">
               <div class="trainer__wrapper-inner">
                 <h3>Анна Павлова</h3>
                 <p>CrossFit</p>
@@ -336,7 +336,7 @@
                 </div>
               </div>
             </li>
-            <li class="coaches__item swiper-slide trainer">
+            <li class="coaches__item slide trainer">
               <div class="trainer__wrapper-inner">
                 <h3>Алексей Лавров</h3>
                 <p>CrossFit</p>
@@ -354,7 +354,7 @@
                 </div>
               </div>
             </li>
-            <li class="coaches__item swiper-slide trainer">
+            <li class="coaches__item slide trainer">
               <div class="trainer__wrapper-inner">
                 <h3>Александр Пашков</h3>
                 <p>CrossFit</p>
@@ -372,7 +372,7 @@
                 </div>
               </div>
             </li>
-            <li class="coaches__item swiper-slide trainer">
+            <li class="coaches__item slide trainer">
               <div class="trainer__wrapper-inner">
                 <h3>Мария Кетова</h3>
                 <p>CrossFit</p>
@@ -391,12 +391,12 @@
               </div>
             </li>
           </ul>
-          <button class="swiper-button-next coaches__button coaches__button--next">
+          <button class="next coaches__button coaches__button--next">
             <svg width="18" height="32">
               <use href="img/sprite_auto.svg#icon-arrow-right"></use>
             </svg>
           </button>
-          <button class="swiper-button-prev coaches__button coaches__button--prev">
+          <button class="prev coaches__button coaches__button--prev">
             <svg width="18" height="32">
               <use href="img/sprite_auto.svg#icon-arrow-left"></use>
             </svg>
@@ -479,31 +479,46 @@
     <section class="feedback">
       <h2 class="feedback__title">Отзывы</h2>
       <div class="feedback__container">
-        <ul class="feedback__list">
-          <li class="feedback__item comment">
-            <blockquote>
-              <h3>Анна Орлова</h3>
-              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-            </blockquote>
-            <div class="comment__img-container">
-              <picture>
-                <source type="image/webp" srcset="img/feedback-avatar-orlova@1x.webp 1x, img/feedback-avatar-orlova@2x.webp 2x">
-                <!-- 1х: 80px; 2x: 160px -->
-                <img src="img/feedback-avatar-orlova@1x.png" srcset="img/feedback-avatar-orlova@2x.png 2x" alt="Анна Орлова" width="80" height="80">
-              </picture>
-            </div>
-          </li>
-        </ul>
-        <button class="feedback__button feedback__button--next">
-          <svg width="18" height="32">
-            <use href="img/sprite_auto.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
-        <button class="feedback__button feedback__button--prev">
-          <svg width="18" height="32">
-            <use href="img/sprite_auto.svg#icon-arrow-left"></use>
-          </svg>
-        </button>
+        <div class="feedback__container-inner">
+          <ul class="feedback__list slider">
+            <li class="feedback__item comment slide">
+              <blockquote>
+                <h3>Анна Орлова</h3>
+                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </blockquote>
+              <div class="comment__img-container">
+                <picture>
+                  <source type="image/webp" srcset="img/feedback-avatar-orlova@1x.webp 1x, img/feedback-avatar-orlova@2x.webp 2x">
+                  <!-- 1х: 80px; 2x: 160px -->
+                  <img src="img/feedback-avatar-orlova@1x.png" srcset="img/feedback-avatar-orlova@2x.png 2x" alt="Анна Орлова" width="80" height="80">
+                </picture>
+              </div>
+            </li>
+            <li class="feedback__item comment slide">
+              <blockquote>
+                <h3>Анна Орлова</h3>
+                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </blockquote>
+              <div class="comment__img-container">
+                <picture>
+                  <source type="image/webp" srcset="img/feedback-avatar-orlova@1x.webp 1x, img/feedback-avatar-orlova@2x.webp 2x">
+                  <!-- 1х: 80px; 2x: 160px -->
+                  <img src="img/feedback-avatar-orlova@1x.png" srcset="img/feedback-avatar-orlova@2x.png 2x" alt="Анна Орлова" width="80" height="80">
+                </picture>
+              </div>
+            </li>
+          </ul>
+          <button class="next feedback__button feedback__button--next">
+            <svg width="18" height="32">
+              <use href="img/sprite_auto.svg#icon-arrow-right"></use>
+            </svg>
+          </button>
+          <button class="prev feedback__button feedback__button--prev">
+            <svg width="18" height="32">
+              <use href="img/sprite_auto.svg#icon-arrow-left"></use>
+            </svg>
+          </button>
+        </div>
       </div>
     </section>
     <div class="main__wrapper">
@@ -609,25 +624,5 @@
   </footer>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    var swiperCoaches = new Swiper('.coaches__container-inner', {
-      breakpoints: {
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-          slidesPerGroup: 4
-        },
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 30,
-          slidesPerGroup: 2
-        }
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      }
-    });
-  </script>
 </body>
 </html>

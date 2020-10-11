@@ -39,6 +39,11 @@
 
 .coaches__item {
   flex-shrink: 0;
+  margin-right: 40px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .coaches__button {
@@ -68,7 +73,7 @@
   }
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: 1300px) {
   .coaches {
     max-width: 678px;
     padding-top: 36px;
@@ -82,6 +87,10 @@
 
     font-size: 42px;
     line-height: 42px;
+  }
+
+  .coaches__item {
+    margin-right: 30px;
   }
 }
 
