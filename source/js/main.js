@@ -288,8 +288,8 @@
     this.slidesContainer = domNode;
     this.slider = this.slidesContainer.querySelector('.slider');
     this.slides = this.slider.querySelectorAll('.slide');
-    this.prevBtn = this.slidesContainer.querySelector('.prev');
-    this.nextBtn = this.slidesContainer.querySelector('.next');
+    this.previousButton = this.slidesContainer.querySelector('.sliderPreviousButton');
+    this.nextButton = this.slidesContainer.querySelector('.sliderNextButton');
     this.slidesCount = this.slides.length;
     this.position = 0;
     this.config = config;
@@ -299,23 +299,15 @@
 
   CreateSlider.prototype = {
     init: function () {
-      var self = this;
-
-      this.checkBtns();
-      this.addClick();
-
+      this.checkButtons();
+      this.addPointerEvents();
       this.slider.style.transition = '0.5s';
-
-      window.addEventListener('resize', function () {
-        self.checkBtns();
-
-        self.addClick();
-      });
     },
 
     findSuitableCfg: function () {
-      var suitableCfg = this.config.find((cfg) => window.matchMedia('(min-width: ' + cfg.screenWidth + 'px)').matches);
-
+      var suitableCfg = this.config.find(function (cfg) {
+        return window.matchMedia('(min-width: ' + cfg.screenWidth + 'px)').matches;
+      });
       return suitableCfg;
     },
 
@@ -323,52 +315,133 @@
       this.slider.style.transform = 'translateX(' + this.position + 'px)';
     },
 
-    checkBtns: function () {
-      var myConfig = this.findSuitableCfg();
+    checkButtons: function () {
+      var currentConfig = this.findSuitableCfg();
 
       if (this.position === 0) {
-        this.prevBtn.setAttribute('disabled', 'disabled');
+        this.previousButton.setAttribute('disabled', 'disabled');
       } else {
-        this.prevBtn.removeAttribute('disabled');
+        this.previousButton.removeAttribute('disabled');
       }
 
-      if (this.position <= -(this.slidesCount - myConfig.slidesToShow) * (myConfig.slideWidth + myConfig.slideGap)) {
-        this.nextBtn.setAttribute('disabled', 'disabled');
+      if (this.position <= -(this.slidesCount - currentConfig.slidesToShow) * (currentConfig.slideWidth + currentConfig.slideGap)) {
+        this.nextButton.setAttribute('disabled', 'disabled');
       } else {
-        this.nextBtn.removeAttribute('disabled');
+        this.nextButton.removeAttribute('disabled');
       }
     },
 
-    addClick: function() {
-      var myConfig = this.findSuitableCfg();
+    addPointerEvents: function () {
       var self = this;
 
-      this.prevBtn.addEventListener('click', function () {
-        var slidesLeft = Math.abs(self.position) / (myConfig.slideWidth + myConfig.slideGap);
-        var movePosition = (myConfig.slideWidth + myConfig.slideGap) * myConfig.slidesToScroll;
+      var moveLeft = function () {
+        var currentConfig = self.findSuitableCfg();
+        var slidesLeft = Math.abs(self.position) / (currentConfig.slideWidth + currentConfig.slideGap);
+        var movePosition = (currentConfig.slideWidth + currentConfig.slideGap) * currentConfig.slidesToScroll;
 
-        if (slidesLeft >= myConfig.slidesToScroll) {
+        if (slidesLeft >= currentConfig.slidesToScroll) {
           self.position += movePosition;
         } else {
-          self.position += slidesLeft * (myConfig.slideWidth + myConfig.slideGap);
+          self.position += slidesLeft * (currentConfig.slideWidth + currentConfig.slideGap);
         }
 
         self.setPosition();
-        self.checkBtns();
-      });
+        self.checkButtons();
+      };
 
-      this.nextBtn.addEventListener('click', function () {
-        var slidesLeft = Math.floor(self.slidesCount - (Math.abs(self.position) + myConfig.slidesToShow * myConfig.slideWidth + (myConfig.slidesToShow - 1) * myConfig.slideGap) / (myConfig.slideWidth + myConfig.slideGap));
-        var movePosition = (myConfig.slideWidth + myConfig.slideGap) * myConfig.slidesToScroll;
+      var moveRight = function () {
+        var currentConfig = self.findSuitableCfg();
+        var slidesLeft = Math.floor(self.slidesCount - (Math.abs(self.position) + currentConfig.slidesToShow * currentConfig.slideWidth + (currentConfig.slidesToShow - 1) * currentConfig.slideGap) / (currentConfig.slideWidth + currentConfig.slideGap));
+        var movePosition = (currentConfig.slideWidth + currentConfig.slideGap) * currentConfig.slidesToScroll;
 
-        if (slidesLeft >= myConfig.slidesToScroll) {
+        if (slidesLeft >= currentConfig.slidesToScroll) {
           self.position -= movePosition;
         } else {
-          self.position -= slidesLeft * (myConfig.slideWidth + myConfig.slideGap);
+          self.position -= slidesLeft * (currentConfig.slideWidth + currentConfig.slideGap);
         }
 
         self.setPosition();
-        self.checkBtns();
+        self.checkButtons();
+      };
+
+      var swipe = function (el) {
+        var settings = {
+          minDistanсe: 30,
+          maxDistance: 300,
+          maxTime: 700,
+          minTime: 50
+        };
+
+
+        var direction;
+        var swipeType;
+        var distance;
+        var startX = 0;
+        var distanceX = 0;
+        var startY = 0;
+        var distanceY = 0;
+        var startTime = 0;
+
+        var checkStart = function (evt) {
+          direction = 'none';
+          swipeType = 'none';
+          distance = 0;
+          startX = evt.pageX;
+          startY = evt.pageY;
+          startTime = new Date().getTime();
+        };
+
+        var checkMove = function (evt) {
+          distanceX = evt.pageX - startX;
+          distanceY = evt.pageY - startY;
+
+          if (Math.abs(distanceX) > Math.abs(distanceY)) {
+            direction = (distanceX < 0) ? 'left' : 'right';
+          } else {
+            direction = (distanceY < 0) ? 'up' : 'down';
+          }
+        };
+
+        var checkEnd = function () {
+          var endTime = new Date().getTime();
+          var time = endTime - startTime;
+          if (time >= settings.minTime && time <= settings.maxTime) {
+            if (Math.abs(distanceX) >= settings.minDistanсe && Math.abs(distanceY) <= settings.maxDistance) {
+              swipeType = direction;
+            } else if (Math.abs(distanceY) >= settings.minDist && Math.abs(distanceX) <= settings.maxDistance) {
+              swipeType = direction;
+            }
+          }
+          distance = (direction === 'left' || direction === 'right') ? Math.abs(distanceX) : Math.abs(distanceY);
+
+          if (swipeType !== 'none' && distance >= settings.minDistanсe) {
+            var swipeEvent = new CustomEvent('swipe', {
+              detail: {
+                direction: swipeType,
+                distance: distance,
+                time: time
+              }
+            });
+            el.dispatchEvent(swipeEvent);
+          }
+        };
+
+        el.addEventListener('touchstart', checkStart);
+        el.addEventListener('touchmove', checkMove);
+        el.addEventListener('touchend', checkEnd);
+      };
+
+      this.previousButton.addEventListener('click', moveLeft);
+      this.nextButton.addEventListener('click', moveRight);
+
+      swipe(this.slider);
+
+      this.slider.addEventListener('swipe', function (evt) {
+        if (evt.detail.direction === 'left') {
+          moveRight();
+        } else if (evt.detail.direction === 'right') {
+          moveLeft();
+        }
       });
     }
   };
@@ -376,14 +449,14 @@
   var configCoaches = [
     {
       screenWidth: 1301,
-      slidesToScroll: 1,
+      slidesToScroll: 4,
       slidesToShow: 4,
       slideWidth: 260,
       slideGap: 40
     },
     {
       screenWidth: 768,
-      slidesToScroll: 1,
+      slidesToScroll: 2,
       slidesToShow: 2,
       slideWidth: 268,
       slideGap: 30
