@@ -314,7 +314,7 @@
     },
 
     findSuitableCfg: function () {
-      var suitableCfg = this.config.find((cfg) => window.matchMedia(`(min-width: ${cfg.screenWidth}px)`).matches);
+      var suitableCfg = this.config.find((cfg) => window.matchMedia('(min-width: ' + cfg.screenWidth + 'px)').matches);
 
       return suitableCfg;
     },
@@ -333,7 +333,7 @@
       }
 
       if (this.position <= -(this.slidesCount - myConfig.slidesToShow) * (myConfig.slideWidth + myConfig.slideGap)) {
-          this.nextBtn.setAttribute('disabled', 'disabled');
+        this.nextBtn.setAttribute('disabled', 'disabled');
       } else {
         this.nextBtn.removeAttribute('disabled');
       }
@@ -371,9 +371,7 @@
         self.checkBtns();
       });
     }
-  }
-
-
+  };
 
   var configCoaches = [
     {
