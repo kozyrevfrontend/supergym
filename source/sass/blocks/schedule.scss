@@ -1,4 +1,6 @@
 .schedule__container {
+  position: relative;
+
   width: 84.69%;
   margin: 0 auto;
   display: flex;
@@ -46,6 +48,12 @@
 
     border-color: transparent;
     background-color: #ed0233;
+  }
+
+  &--disabled {
+    color: #d2d6e3;
+
+    border-color: #d2d6e3;
   }
 }
 
@@ -122,33 +130,8 @@
   }
 }
 
-.schedule__training-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-
+.schedule__select {
   display: none;
-
-  width: 22.8%;
-  height: 60px;
-
-  border: 2px solid #1c3374;
-  background-color: transparent;
-
-  &--sunday {
-    height: 58px;
-  }
-
-  svg {
-    fill: none;
-    transition: 0.5s;
-  }
-}
-
-.schedule__training-button--opened {
-  svg {
-    transform: rotate(180deg);
-  }
 }
 
 @media (max-width: $tablet-width) {
@@ -224,7 +207,7 @@
   }
 
   .schedule__time-list {
-    width: 20.69%;
+    width: 60px;
     margin-top: 67px;
     margin-right: 8px;
   }
@@ -236,10 +219,16 @@
   }
 
   .schedule__main-list {
+    position: absolute;
+    top: 60px;
+    left: 68px;
+
     width: 76.55%;
     flex-direction: column;
 
     overflow-x: auto;
+
+    z-index: 20;
   }
 
   .schedule__main-item {
@@ -248,45 +237,24 @@
     width: 100%;
     margin-right: 0;
     margin-bottom: 0;
-
-    &:hover,
-    &:focus {
-      .schedule__training-button {
-        display: block;
-      }
-    }
   }
 
   .schedule__day {
-    width: 77.92%;
-    height: 58px;
-    margin-bottom: 0;
-
-    font-size: 16px;
-
-    border-bottom: 0;
-
-    &--sunday {
-      border: 2px solid #1c3374;
-    }
+    display: none;
   }
 
   .schedule__training-list {
     display: none;
-  }
-
-  .schedule__training-list--opened {
-    position: absolute;
-    top: 60px;
-    left: 0;
-
-    display: block;
     width: 100%;
     padding-top: 8px;
 
     background-color: #ffffff;
 
     z-index: 10;
+
+    &--opened {
+      display: block;
+    }
   }
 
   .schedule__training-item {
@@ -296,6 +264,10 @@
       font-size: 16px;
       line-height: 24px;
     }
+  }
+
+  .schedule__select {
+    display: flex;
   }
 
   ::-webkit-scrollbar {

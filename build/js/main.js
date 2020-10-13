@@ -429,15 +429,13 @@
         el.addEventListener('touchstart', checkStart);
         el.addEventListener('touchmove', checkMove);
         el.addEventListener('touchend', checkEnd);
-        el.addEventListener('pointerdown', checkStart);
-        el.addEventListener('poinermove', checkMove);
-        el.addEventListener('pointerup', checkEnd);
       };
 
       this.previousButton.addEventListener('click', moveLeft);
       this.nextButton.addEventListener('click', moveRight);
 
       swipe(this.slider);
+
       this.slider.addEventListener('swipe', function (evt) {
         if (evt.detail.direction === 'left') {
           moveRight();

@@ -24,7 +24,7 @@
       <ul class="schedule__main-list">
         <li class="schedule__main-item">
           <h2 class="schedule__day"><span>Понедельник</span></h2>
-          <ul class="schedule__training-list">
+          <ul class="schedule__training-list schedule__training-list--opened" data-select="Monday">
             <li class="schedule__training-item" data-time="08:00">
               <label for="08:00-Monday-CrossFit">CrossFit</label>
               <input class="visually-hidden" type="checkbox" id="08:00-Monday-CrossFit" name="08:00-Monday-CrossFit" form="schedule__form" data-time="08:00">
@@ -42,15 +42,10 @@
               <input class="visually-hidden" type="checkbox" id="20:00-Monday-Stretching" name="20:00-Monday-Stretching" form="schedule__form">
             </li>
           </ul>
-          <button class="schedule__training-button" aria-label="Открыть расписание">
-            <svg width="19" height="10">
-              <use href="img/sprite_auto.svg#icon-arrow-up"></use>
-            </svg>
-          </button>
         </li>
         <li class="schedule__main-item">
           <h2 class="schedule__day"><span>Вторник</span></h2>
-          <ul class="schedule__training-list">
+          <ul class="schedule__training-list" data-select="Tuesday">
             <li class="schedule__training-item" data-time="08:00">
               <label for="08:00-Tuesday-Aerostretching">Aerostretching</label>
               <input class="visually-hidden" type="checkbox" id="08:00-Tuesday-Aerostretching" name="08:00-Tuesday-Aerostretching" form="schedule__form" data-time="08:00">
@@ -68,15 +63,10 @@
               <input class="visually-hidden" type="checkbox" id="20:00-Tuesday-Functional" name="20:00-Tuesday-Functional" form="schedule__form">
             </li>
           </ul>
-          <button class="schedule__training-button" aria-label="Открыть расписание">
-            <svg width="19" height="10">
-              <use href="img/sprite_auto.svg#icon-arrow-up"></use>
-            </svg>
-          </button>
         </li>
         <li class="schedule__main-item">
           <h2 class="schedule__day"><span>Среда</span></h2>
-          <ul class="schedule__training-list">
+          <ul class="schedule__training-list" data-select="Wednesday">
             <li class="schedule__training-item" data-time="08:00">
               <label for="08:00-Wednesday-HotIron">Hot Iron</label>
               <input class="visually-hidden" type="checkbox" id="08:00-Wednesday-HotIron" name="08:00-Wednesday-HotIron" form="schedule__form" data-time="08:00">
@@ -94,15 +84,10 @@
               <input class="visually-hidden" type="checkbox" id="20:00-Wednesday-BodySculpt" name="20:00-Wednesday-BodySculpt" form="schedule__form">
             </li>
           </ul>
-          <button class="schedule__training-button" aria-label="Открыть расписание">
-            <svg width="19" height="10">
-              <use href="img/sprite_auto.svg#icon-arrow-up"></use>
-            </svg>
-          </button>
         </li>
         <li class="schedule__main-item">
           <h2 class="schedule__day"><span>Четверг</span></h2>
-          <ul class="schedule__training-list">
+          <ul class="schedule__training-list" data-select="Thursday">
             <li class="schedule__training-item" data-time="08:00">
               <label for="08:00-Thursday-Pilates">Pilates</label>
               <input class="visually-hidden" type="checkbox" id="08:00-Thursday-Pilates" name="08:00-Thursday-Pilates" form="schedule__form" data-time="08:00">
@@ -120,15 +105,10 @@
               <input class="visually-hidden" type="checkbox" id="20:00-Thursday-CrossFit" name="20:00-Thursday-CrossFit" form="schedule__form">
             </li>
           </ul>
-          <button class="schedule__training-button" aria-label="Открыть расписание">
-            <svg width="19" height="10">
-              <use href="img/sprite_auto.svg#icon-arrow-up"></use>
-            </svg>
-          </button>
         </li>
         <li class="schedule__main-item">
           <h2 class="schedule__day"><span>Пятница</span></h2>
-          <ul class="schedule__training-list">
+          <ul class="schedule__training-list" data-select="Friday">
             <li class="schedule__training-item" data-time="08:00">
               <label for="08:00-Friday-Stretching">Stretching</label>
               <input class="visually-hidden" type="checkbox" id="08:00-Friday-Stretching" name="08:00-Friday-Stretching" form="schedule__form" data-time="08:00">
@@ -146,15 +126,10 @@
               <input class="visually-hidden" type="checkbox" id="20:00-Friday-Aerostretching" name="20:00-Friday-Aerostretching" form="schedule__form">
             </li>
           </ul>
-          <button class="schedule__training-button" aria-label="Открыть расписание">
-            <svg width="19" height="10">
-              <use href="img/sprite_auto.svg#icon-arrow-up"></use>
-            </svg>
-          </button>
         </li>
         <li class="schedule__main-item">
           <h2 class="schedule__day"><span>Суббота</span></h2>
-          <ul class="schedule__training-list">
+          <ul class="schedule__training-list" data-select="Saturday">
             <li class="schedule__training-item" data-time="08:00">
               <label for="08:00-Saturday-Functional">Functional</label>
               <input class="visually-hidden" type="checkbox" id="08:00-Saturday-Functional" name="08:00-Saturday-Functional" form="schedule__form" data-time="08:00">
@@ -172,15 +147,10 @@
               <input class="visually-hidden" type="checkbox" id="20:00-Saturday-HotIron" name="20:00-Saturday-HotIron" form="schedule__form">
             </li>
           </ul>
-          <button class="schedule__training-button" aria-label="Открыть расписание">
-            <svg width="19" height="10">
-              <use href="img/sprite_auto.svg#icon-arrow-up"></use>
-            </svg>
-          </button>
         </li>
         <li class="schedule__main-item">
           <h2 class="schedule__day schedule__day--sunday"><span>Воскресенье</span></h2>
-          <ul class="schedule__training-list">
+          <ul class="schedule__training-list" data-select="Sunday">
             <li class="schedule__training-item" data-time="08:00">
               <label for="08:00-Sunday-BodySculpt">Body Sculpt</label>
               <input class="visually-hidden" type="checkbox" id="08:00-Sunday-BodySculpt" name="08:00-Sunday-BodySculpt" form="schedule__form" data-time="08:00">
@@ -198,13 +168,39 @@
               <input class="visually-hidden" type="checkbox" id="20:00-Sunday-Pilates" name="20:00-Sunday-Pilates" form="schedule__form">
             </li>
           </ul>
-          <button class="schedule__training-button schedule__training-button--sunday" aria-label="Открыть расписание">
-            <svg width="19" height="10">
-              <use href="img/sprite_auto.svg#icon-arrow-up"></use>
-            </svg>
-          </button>
         </li>
       </ul>
+      <div class="select schedule__select">
+        <p class="select__aria"><span class="select__value">Понедельник</span></p>
+        <ul class="select__list select__list--closed">
+          <li class="select__item" data-select="Monday">
+            <span>Понедельник</span>
+          </li>
+          <li class="select__item" data-select="Tuesday">
+            <span>Вторник</span>
+          </li>
+          <li class="select__item" data-select="Wednesday">
+            <span>Среда</span>
+          </li>
+          <li class="select__item" data-select="Thursday">
+            <span>Четверг</span>
+          </li>
+          <li class="select__item" data-select="Friday">
+            <span>Пятница</span>
+          </li>
+          <li class="select__item" data-select="Saturday">
+            <span>Суббота</span>
+          </li>
+          <li class="select__item" data-select="Sunday">
+            <span>Воскресенье</span>
+          </li>
+        </ul>
+        <button class="select__button select__button--opened" aria-label="Открыть расписание">
+          <svg width="19" height="10">
+            <use href="img/sprite_auto.svg#icon-arrow-up"></use>
+          </svg>
+        </button>
+      </div>
     </div>
     <form class="visually-hidden" id="schedule__form" action="https://echo.htmlacademy.ru"><button type="submit"></button></form>
   </main>
