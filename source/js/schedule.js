@@ -59,10 +59,31 @@
     }
   });
 
-  var addCheckboxChangeListener = function (checkbox) {
+  var addCheckboxEventsListeners = function (checkbox) {
+    var currentTimeBox;
     var currentTrainingBox = checkbox.parentElement;
+    var currentDayBox = currentTrainingBox.parentElement.previousElementSibling;
+
+    for (var t = 0; t < timeBoxes.length; t++) {
+      if (timeBoxes[t].matches('li[data-time="' + currentTrainingBox.getAttribute('data-time') + '"]')) {
+        currentTimeBox = timeBoxes[t];
+      }
+    }
+
     checkbox.addEventListener('change', function () {
       currentTrainingBox.classList.toggle('schedule__training-item--checked');
+    });
+
+    checkbox.addEventListener('focus', function () {
+      currentTrainingBox.classList.add('schedule__training-item--hovered');
+      currentDayBox.classList.add('schedule__day--hovered');
+      currentTimeBox.classList.add('schedule__time-item--hovered');
+    });
+
+    checkbox.addEventListener('blur', function () {
+      currentTrainingBox.classList.remove('schedule__training-item--hovered');
+      currentDayBox.classList.remove('schedule__day--hovered');
+      currentTimeBox.classList.remove('schedule__time-item--hovered');
     });
   };
 
@@ -85,9 +106,9 @@
   var addMouseoutListener = function (box) {
     var currentTimeBox;
     var currentDayBox = box.parentElement.previousElementSibling;
-    for (var i = 0; i < timeBoxes.length; i++) {
-      if (timeBoxes[i].matches('li[data-time="' + box.getAttribute('data-time') + '"]')) {
-        currentTimeBox = timeBoxes[i];
+    for (var q = 0; q < timeBoxes.length; q++) {
+      if (timeBoxes[q].matches('li[data-time="' + box.getAttribute('data-time') + '"]')) {
+        currentTimeBox = timeBoxes[q];
       }
     }
     box.addEventListener('mouseout', function () {
@@ -106,6 +127,6 @@
   }
 
   for (var m = 0; m < checkboxInputs.length; m++) {
-    addCheckboxChangeListener(checkboxInputs[m]);
+    addCheckboxEventsListeners(checkboxInputs[m]);
   }
 })();
