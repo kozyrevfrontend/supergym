@@ -367,39 +367,6 @@
       this.previousButton.addEventListener('click', moveLeft);
       this.nextButton.addEventListener('click', moveRight);
 
-      // this.slider.addEventListener('touchstart', function (evt) {
-      //   evt.preventDefault();
-      //   var startCoords = {
-      //     x: evt.pageX,
-      //     y: evt.pageY
-      //   };
-
-      //   var onTouchMove = function (moveEvt) {
-      //     moveEvt.preventDefault();
-      //     var shift = {
-      //       x: moveEvt.pageX - startCoords.x,
-      //       y: moveEvt.pageY - startCoords.y
-      //     };
-
-      //     if (Math.abs(shift.x) > Math.abs(shift.y) && Math.abs(shift.x) > 50) {
-      //       if (shift.x < 0) {
-      //         moveRight();
-      //       } else {
-      //         moveLeft();
-      //       }
-      //     }
-      //   };
-
-      //   var onTouchEnd = function (endEvt) {
-      //     endEvt.preventDefault();
-      //     self.slider.removeEventListener('touchmove', onTouchMove);
-      //     self.slider.removeEventListener('touchend', onTouchEnd);
-      //   };
-
-      //   self.slider.addEventListener('touchmove', onTouchMove);
-      //   self.slider.addEventListener('touchend', onTouchEnd);
-      // });
-
       var swipe = function (el) {
         var settings = {
           minDistanсe: 30,
@@ -422,14 +389,14 @@
           direction = 'none';
           swipeType = 'none';
           distance = 0;
-          startX = evt.pageX;
-          startY = evt.pageY;
+          startX = evt.targetTouches[0].pageX;
+          startY = evt.targetTouches[0].pageY;
           startTime = new Date().getTime();
         };
 
         var checkMove = function (evt) {
-          distanceX = evt.pageX - startX;
-          distanceY = evt.pageY - startY;
+          distanceX = evt.targetTouches[0].pageX - startX;
+          distanceY = evt.targetTouches[0].pageY - startY;
 
           if (Math.abs(distanceX) > Math.abs(distanceY)) {
             direction = (distanceX < 0) ? 'left' : 'right';
