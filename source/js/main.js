@@ -364,6 +364,42 @@
         self.checkButtons();
       };
 
+      this.previousButton.addEventListener('click', moveLeft);
+      this.nextButton.addEventListener('click', moveRight);
+
+      // this.slider.addEventListener('touchstart', function (evt) {
+      //   evt.preventDefault();
+      //   var startCoords = {
+      //     x: evt.pageX,
+      //     y: evt.pageY
+      //   };
+
+      //   var onTouchMove = function (moveEvt) {
+      //     moveEvt.preventDefault();
+      //     var shift = {
+      //       x: moveEvt.pageX - startCoords.x,
+      //       y: moveEvt.pageY - startCoords.y
+      //     };
+
+      //     if (Math.abs(shift.x) > Math.abs(shift.y) && Math.abs(shift.x) > 50) {
+      //       if (shift.x < 0) {
+      //         moveRight();
+      //       } else {
+      //         moveLeft();
+      //       }
+      //     }
+      //   };
+
+      //   var onTouchEnd = function (endEvt) {
+      //     endEvt.preventDefault();
+      //     self.slider.removeEventListener('touchmove', onTouchMove);
+      //     self.slider.removeEventListener('touchend', onTouchEnd);
+      //   };
+
+      //   self.slider.addEventListener('touchmove', onTouchMove);
+      //   self.slider.addEventListener('touchend', onTouchEnd);
+      // });
+
       var swipe = function (el) {
         var settings = {
           minDistanсe: 30,
@@ -430,9 +466,6 @@
         el.addEventListener('touchmove', checkMove);
         el.addEventListener('touchend', checkEnd);
       };
-
-      this.previousButton.addEventListener('click', moveLeft);
-      this.nextButton.addEventListener('click', moveRight);
 
       swipe(this.slider);
 
