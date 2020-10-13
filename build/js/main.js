@@ -15,21 +15,28 @@
   function findVideo() {
     var video = document.querySelector('.video__container');
 
-    setupVideo(video);
+    if (video) {
+      setupVideo(video);
+    }
   }
 
   function setupVideo(video) {
     var link = document.querySelector('.video__link');
-    link.removeAttribute('href');
+
+    if (link) {
+      link.removeAttribute('href');
+    }
 
     var button = document.querySelector('.video__button');
 
-    button.addEventListener('click', function () {
-      var iframe = createIframe();
-      link.remove();
-      button.remove();
-      video.appendChild(iframe);
-    });
+    if (button) {
+      button.addEventListener('click', function () {
+        var iframe = createIframe();
+        link.remove();
+        button.remove();
+        video.appendChild(iframe);
+      });
+    }
 
     video.classList.add('video__container--enabled');
   }
@@ -502,8 +509,10 @@
 (function () {
   var phoneInput = document.querySelector('#user-phone');
 
-  phoneInput.addEventListener('keyup', function (evt) {
-    var target = evt.target;
-    target.value = this.value.replace(/[a-zA-Zа-яёА-ЯЁ]/g, '');
-  });
+  if (phoneInput) {
+    phoneInput.addEventListener('keyup', function (evt) {
+      var target = evt.target;
+      target.value = this.value.replace(/[a-zA-Zа-яёА-ЯЁ]/g, '');
+    });
+  }
 })();
