@@ -268,7 +268,7 @@
     margin-bottom: 0;
     padding: 22px 28px;
 
-    &--free-month {
+    &:first-child {
       .promo__description {
         padding-right: 27px;
         margin-bottom: 46px;
@@ -366,14 +366,14 @@
       margin-bottom: 0;
     }
 
-    &--free-month {
+    &:first-child {
       .promo__description {
         padding-right: 0;
         margin-bottom: 28px;
       }
     }
 
-    &--discount {
+    &:nth-child(2) {
       .promo__description {
         padding: 0 27px;
       }
