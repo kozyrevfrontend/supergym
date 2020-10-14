@@ -67,6 +67,17 @@
   border: 3px solid #ffffff;
   border-radius: 0;
   background-color: transparent;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -104,6 +115,15 @@
 
   .form__button {
     width: 100%;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 }
 

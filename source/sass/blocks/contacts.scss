@@ -74,6 +74,15 @@
 
 .contacts__link {
   color: #102654;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -127,6 +136,17 @@
   .contacts__description {
     font-size: 18px;
     line-height: 27px;
+  }
+
+  .contacts__link {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 }
 
